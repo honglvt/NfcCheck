@@ -84,10 +84,6 @@ module.exports = DevicesDao = (req, res) => {
             }
 
             result.forEach((item) => {
-                console.log(FormatDateTime(item.installDate));
-                item.qualityDate = FormatDateTime(item.qualityDate);
-                item.lastCheckDate = FormatDateTime(item.lastCheckDate);
-                item.lastRepairDate = FormatDateTime(item.lastRepairDate);
                 item.lastTime = Math.round((new Date().getTime() - Number.parseInt(item.installDate)) / 1000 / 3600)
             })
 
