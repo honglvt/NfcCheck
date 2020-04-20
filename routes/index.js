@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var DevicesDao = require('../dao/DevicesDao');
+var path = require('path');
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {
@@ -30,6 +32,11 @@ router.post('/check', function (req, res, next) {
     data: req.body
   })
 });
+
+// router.get("/deviceDetail", (req, res, next) => {
+//   console.log(path.join(__dirname, '../pages/index.html'));
+//   res.sendfile(path.join(__dirname, '../pages/index.html'))
+// })
 
 
 module.exports = router;
