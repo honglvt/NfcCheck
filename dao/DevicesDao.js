@@ -84,7 +84,6 @@ module.exports = DevicesDao = (req, res) => {
             }
 
             result.forEach((item) => {
-                item.installDate = FormatDateTime(item.installDate);
                 console.log(FormatDateTime(item.installDate));
                 item.qualityDate = FormatDateTime(item.qualityDate);
                 item.lastCheckDate = FormatDateTime(item.lastCheckDate);
