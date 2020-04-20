@@ -13,7 +13,7 @@ const a = [{
         qualityCode: "1584720000", //质检合格证编号
         qualityDate: "1584720000", //发证日期 2020-04-18
         lastCheckDate: "1584806400", //最近巡检日期 2020-04-21
-        lastRepairDate: "1584892800", //最近维修日期 2020-04-21
+        lastRepairDate: "1586611164", //最近维修日期 2020-04-21
         errorTimes: 2, //电梯故障发生次数
         lastTime: "12", //持续运行时间
     },
@@ -29,7 +29,7 @@ const a = [{
         qualityCode: "1584720000", //质检合格证编号
         qualityDate: "1584720000", //发证日期 2020-04-18
         lastCheckDate: "1584806400", //最近巡检日期 2020-04-21
-        lastRepairDate: "1584892800", //最近维修日期 2020-04-21
+        lastRepairDate: "1586783964", //最近维修日期 2020-04-21
         errorTimes: 6, //电梯故障发生次数
         lastTime: "12", //持续运行时间
     },
@@ -45,7 +45,7 @@ const a = [{
         qualityCode: "1584720000", //质检合格证编号
         qualityDate: "1584720000", //发证日期 2020-04-18
         lastCheckDate: "1584806400", //最近巡检日期 2020-04-21
-        lastRepairDate: "1584892800", //最近维修日期 2020-04-21
+        lastRepairDate: "1586783964", //最近维修日期 2020-04-21
         errorTimes: 5, //电梯故障发生次数
         lastTime: "1", //持续运行时间
     },
@@ -61,7 +61,7 @@ const a = [{
         qualityCode: "1584720000", //质检合格证编号
         qualityDate: "1584720000", //发证日期 2020-04-18
         lastCheckDate: "1584806400", //最近巡检日期 2020-04-21
-        lastRepairDate: "1584892800", //最近维修日期 2020-04-21
+        lastRepairDate: "1587388764", //最近维修日期 2020-04-21
         errorTimes: 5, //电梯故障发生次数
         lastTime: "1", //持续运行时间
     }
@@ -84,7 +84,7 @@ module.exports = DevicesDao = (req, res) => {
             }
 
             result.forEach((item) => {
-                item.lastTime = Math.round((new Date().getTime() - Number.parseInt(item.installDate)) / 1000 / 3600)
+                item.lastTime = Math.round((new Date().getTime() - Number.parseInt(item.installDate * 1000)) / 1000 / 3600)
             })
 
             res.json({
