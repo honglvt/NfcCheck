@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb://127.0.0.1:27017";
 
 const a = [{
-        id: "OA3529345034", //设备id
+        id: "OA3120739146", //设备id
         brand: "西子OTIS", //品牌
         model: "XZ-2514", //型号
         refer: "中国联通湖州市分公司", //所属公司
@@ -16,9 +16,10 @@ const a = [{
         lastRepairDate: "1586611164", //最近维修日期 2020-04-21
         errorTimes: 2, //电梯故障发生次数
         lastTime: "12", //持续运行时间
+        status: "运行正常"
     },
     {
-        id: "OA3529345035", //设备id
+        id: "OA2584847618", //设备id
         brand: "西子OTIS", //品牌
         model: "XZ-2514", //型号
         refer: "中国联通湖州市分公司", //所属公司
@@ -32,9 +33,11 @@ const a = [{
         lastRepairDate: "1586783964", //最近维修日期 2020-04-21
         errorTimes: 6, //电梯故障发生次数
         lastTime: "12", //持续运行时间
+        status: "运行正常"
+
     },
     {
-        id: "OA3529345036", //设备id
+        id: "OA4176279298", //设备id
         brand: "西子OTIS", //品牌
         model: "XZ-2514", //型号
         refer: "中国联通湖州市分公司", //所属公司
@@ -48,6 +51,7 @@ const a = [{
         lastRepairDate: "1586783964", //最近维修日期 2020-04-21
         errorTimes: 5, //电梯故障发生次数
         lastTime: "1", //持续运行时间
+        status: "运行正常"
     },
     {
         id: "OA3529345037", //设备id
@@ -64,6 +68,7 @@ const a = [{
         lastRepairDate: "1587388764", //最近维修日期 2020-04-21
         errorTimes: 5, //电梯故障发生次数
         lastTime: "1", //持续运行时间
+        status: "运行正常"
     }
 ]
 

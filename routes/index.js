@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var DevicesDao = require('../dao/DevicesDao');
+var UpdateDao = require('../dao/UpdateDao');
+
 var path = require('path');
 
 /* GET home page. */
@@ -17,9 +19,8 @@ router.get('/devicesById', function (req, res, next) {
   DevicesDao(req, res);
 });
 router.post('/upDateDeviceById', function (req, res, next) {
-  res.json({
-    msg: 'success'
-  })
+  console.log(req.body);
+  UpdateDao(req, res);
 });
 router.post('/check', function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
