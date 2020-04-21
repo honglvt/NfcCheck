@@ -10,7 +10,7 @@ module.exports = UpdateDao = (req, res) => {
                 "lastCheckDate": req.body.lastCheckDate
             }
         }, (err, result) => {
-            console.log(result);
+            console.log(err);
             res.json({
                 code: 200,
                 msg: 'success',
